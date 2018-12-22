@@ -25,6 +25,23 @@
     <meta name="twitter:description" content="Learn how {{page.property_name}} works in CSS.">
 
     {% include favicons.html %}
+    
+    <style>
+      .resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+      .resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+    </style>
+      
   </head>
   <body>
     {% include menu.html %}
@@ -37,6 +54,11 @@
         {{content}}
       </section>
     </main>
+    <div class="resp-container">
+    <iframe class="resp-iframe" src="https://www.youtube.com/embed/kntlBG5wWNA" gesture="media"  allow="encrypted-media" allowfullscreen></iframe>
+</div>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/kntlBG5wWNA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    
     {% include modals/share.html %}
     {% include google-fonts.html %}
     <script src="{{site.url}}/javascript/clipboard.min.js"></script>
